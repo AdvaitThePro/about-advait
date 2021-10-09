@@ -33,7 +33,7 @@
   </div>
  </div>
 
-  <!-- Navbar on small screens -->
+
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
     <a href="#team" class="w3-bar-item w3-button">ㅤ</a>
     <a href="#i" class="w3-bar-item w3-button">About Us</a>
@@ -48,6 +48,24 @@
   </div>
 </div> 
 
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+    <header class="w3-container w3-teal w3-display-container"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4>⚠️ WARNING ⚠️</h4>
+      <h5>This site is best viewed in landscape. If you continue viewing this site in potrait, you will find some minor glitches.</h5>
+      <h6>If you would like to change to landscape, please resize your window or flip your device.</h6>
+    </header>
+    <div class="w3-container">
+      <p>If you would like to continue in potrait, when clicking the 'hamburger', the Navigator will appear at the top of the site. (This bug will be addressed as soon as possible)</p>
+    </div>
+    <footer class="w3-container w3-teal">
+      <h6 class="w3-right-align">Thank you for your cooperation.</h6>
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-bottomleft">Ok</i></span>
+    </footer>
+  </div>
+</div>
 <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
   <img src="{{ url_for('static', filename='./img.jpg') }}" alt="Sorry, there is an internet problem, please try again later." style="width:100%;min-height:350px;max-height:600px;">
@@ -186,6 +204,23 @@ function openNav() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Orientation Warning
+if(screen.availHeight > screen.availWidth){
+    alert("Please use Landscape!");
+    document.getElementById('id01').style.display='block';
+}
+</script>
+
+
 </script>
 
 </body>
