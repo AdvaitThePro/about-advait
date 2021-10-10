@@ -33,16 +33,16 @@
   </div>
   
   <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="#i" class="w3-bar-item w3-button">About Us</a>
-    <a href="#team" class="w3-bar-item w3-button">The Team</a>
-    <a href="#service" class="w3-bar-item w3-button">Our Services</a>
-    <a href="#clients" class="w3-bar-item w3-button">Important Clients</a>
-    <a href="#contact" class="w3-bar-item w3-button">Contact Us</a>
-    <a href="https://www.iras.gov.sg/irashome/default.aspx" class="w3-bar-item w3-button">IRAS</a>
-    <a href="https://www.acra.gov.sg" class="w3-bar-item w3-button">ACRA</a>
-    <a href="https://www.cpf.gov.sg/" class="w3-bar-item w3-button">CPF</a>
-    <a href="https://www.mom.gov.sg" class="w3-bar-item w3-button">Ministry Of Manpower</a>
+  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:40px">
+    <a href="#i" class="w3-bar-item w3-button" onclick="myFunction()">About Us</a>
+    <a href="#team" class="w3-bar-item w3-button" onclick="myFunction()">The Team</a>
+    <a href="#service" class="w3-bar-item w3-button" onclick="myFunction()">Our Services</a>
+    <a href="#clients" class="w3-bar-item w3-button" onclick="myFunction()">Important Clients</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="myFunction()">Contact Us</a>
+    <a href="https://www.iras.gov.sg/irashome/default.aspx" class="w3-bar-item w3-button" onclick="myFunction()">IRAS</a>
+    <a href="https://www.acra.gov.sg" class="w3-bar-item w3-button" onclick="myFunction()">ACRA</a>
+    <a href="https://www.cpf.gov.sg/" class="w3-bar-item w3-button" onclick="myFunction()">CPF</a>
+    <a href="https://www.mom.gov.sg" class="w3-bar-item w3-button" onclick="myFunction()">Ministry Of Manpower</a>
   </div>
   
 <!-- Modal -->
@@ -209,7 +209,15 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
-
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
 // Orientation Warning
 //if(screen.availHeight > screen.availWidth){
 //    document.getElementById('id01').style.display='block';
