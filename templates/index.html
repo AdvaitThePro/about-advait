@@ -35,7 +35,6 @@
   <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
   <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:40px">
     <a href="#i" class="w3-bar-item w3-button" onclick="myFunction()">About Us</a>
-    <a href="#team" class="w3-bar-item w3-button" onclick="myFunction()">The Team</a>
     <a href="#service" class="w3-bar-item w3-button" onclick="myFunction()">Our Services</a>
     <a href="#clients" class="w3-bar-item w3-button" onclick="myFunction()">Important Clients</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="myFunction()">Contact Us</a>
@@ -88,10 +87,78 @@
     we can be assured of receiving the best possible professional assistance
     No matter how simple or complex the requirement may be, we will provide the best
     solution for services you need.</p>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<br>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Work Row -->
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="service">
+<div class="w3-row-padding w3-padding-64 w3-theme-l5" id="service">
 <h1>Our Services</h1>
 <h2>Secretarial</h2>
 <p>Kaizen Management Consultancy specializes in assisting clients to set up the most appropriate
@@ -129,16 +196,12 @@
   <h2>Mail......</h2>
   <h3>Kaizen Management Services Pte Ltd</h3>
   <h3>3 Shenton Way <br>#08-09A<br>Shenton House<br>Singapore 068805</h3>
-  <h2>Or with an email:</h2>
-  <h5>
-    <a href="mailto:info@kaizengroup.sg">info@kaizengroup.sg</a>
-    <br>
-    <a href="mailto:priti@kaizengroup.sg">priti@kaizengroup.sg</a>
-    <br>
-    <a href="mailto:vikas@kaizengroup.sg">vikas@kaizengroup.sg</a>
-  </h5>
+  <div class="mighty-form" id="mf-32a9b06c-94c5-4e99-9fa5-e557680b1107"></div> <script async src="https://form.mightyforms.com/loader/v1/mightyforms.min.js"></script>
+   
+    
+  </div>
 
-</div>
+  </div>
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
@@ -151,50 +214,8 @@
   </div>
 </footer>
 
-<script>
-// Script for side navigation
-function w3_open() {
-  var x = document.getElementById("mySidebar");
-  x.style.width = "300px";
-  x.style.paddingTop = "10%";
-  x.style.display = "block";
-}
 
-// Close side navigation
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-// Orientation Warning
-//if(screen.availHeight > screen.availWidth){
-//    document.getElementById('id01').style.display='block';
-//}
+<script src="{{ url_for('static', filename='./script.js') }}">
 </script>
 
 
