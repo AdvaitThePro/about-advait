@@ -16,7 +16,7 @@
         <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
         <a href="#" class="w3-bar-item w3-button w3-teal"><img src="{{ url_for('static', filename='./logo.png') }}" width="25px" height="25px" title="Kaizen Logo"></i>Kaizen</a>
         <a href="#i" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About Us</a>
-        <a href="#service" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Services</a>
+        <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Services</a>
         <a href="#clients" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Important Clients</a>
         <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact Us</a>
         <div class="w3-dropdown-hover w3-hide-small">
@@ -34,7 +34,7 @@
   <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
   <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:40px">
     <a href="#i" class="w3-bar-item w3-button" onclick="myFunction()">About Us</a>
-    <a href="#service" class="w3-bar-item w3-button" onclick="myFunction()">Our Services</a>
+    <a href="#work" class="w3-bar-item w3-button" onclick="myFunction()">Our Services</a>
     <a href="#clients" class="w3-bar-item w3-button" onclick="myFunction()">Important Clients</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="myFunction()">Contact Us</a>
     <a href="https://www.iras.gov.sg/irashome/default.aspx" class="w3-bar-item w3-button" onclick="myFunction()">IRAS</a>
@@ -157,33 +157,44 @@
 
 
 <!-- Work Row -->
-<div class="w3-row-padding w3-padding-64 w3-theme-l5" id="service">
-<h1>Our Services</h1>
-<h2>Secretarial</h2>
-<p>Kaizen Management Consultancy specializes in assisting clients to set up the most appropriate
-  corporate vehicle for a presence in Singapore.</p>
-<p>• Maintenance of statutory records<br>• Establishment of a Singapore Company (Resident/Non- Resident)<br>• Foreign Corporations- Registration of a Singapore Branch/ Setting up a Singapore Representative office.<br>• Provision of Registered office facilities<br>• Nominee secretary and Professional Nominee director services<br>• Liaison with other professionals on statutory requirements.<br>• Statutory Filings with the Accounting and Corporate Regulatory Authority<br>• De-Registration services including assistance on Winding-Up and Striking Off.<br>• Assisting in preparation of commercial agreements<br>• Assistance in maintaining company ESOP.</p>
-<h2>Accounting</h2>
-<p>• We can help to simplyfy your accounting functions, or help in book-keeping<br>• Our accounting services also include preparation of management accounts and GST submission<br>    ‣ can be prepared on a monthly, quarterly or yearly basis<br>• preparation of unaudited financial statements<br>• Internal Audits<br>• Payroll processment<br>• Cloud-based and traditional accoutning services.</p>
-<h2>Taxation</h2>
-<p>In Singapore, companies are required to file their corporate tax returns with the Inland Revenue
-  Authority of Singapore (IRAS). Tax preparation and filing is a responsibility of all business owners who
-  have to ensure that their corporate tax matters are filed before the given deadline to avoid civil and
-  criminal penalties.
-  However, the nature of tax returns preparation can be seen as complex and time-consuming. In some
-  cases, it can be a distraction to those business owners whose focus is still primarily on managing the
-  business operation.
-  Our team of tax professionals are competent and possess the in-depth technical knowledge to assist
-  businesses across a wide spectrum of tax services. We pride ourselves to be able to deliver a seamless
-  tax planning, advisory and solution that focuses on helping business leaders to make informed tax
-  decisions, and at the same time relieving them of the tedium in tax compliance.</p>
-  <p>Besides statutory tax filing, we also assist our valued clients in attending to queries from IRAS, apply tax ruling and resolving tax issues.<br>• Annual Tax filing procedures for Companies incorporated in Singapore<br>• Personal Tax Filing<br>• GST Quarterly Returns<br>• Withholding Tax<br>• Tax Computation and Filing of Estimated Chargeable Income.<br>• Resolving tax disputes with a view to minimizing tax and penalty exposure
-    </p>
-</div>
-</div>
+<div class="w3-row-padding w3-padding-64 w3-theme-l5" id="work">
 
+  <div class="w3-quarter">
+  <h2>Our Services</h2>
+  <p>We provide many different types of services. Here are some of them.</p>
+  </div>
+  
+  <div class="w3-quarter">
+  <div class="w3-card w3-white">
+    <a href="{{ url_for('accser') }}"><img src="{{ url_for('static', filename='./sec.png') }}" alt="Error Loading Image......" style="width:100%"></a>
+    <div class="w3-container">
+    <a href="{{ url_for('accser') }}"><button class="w3-button w3-hover-white"><h3>Secretarial</h3></button></a>
+    </div>
+    </div>
+  </div>
+  
+  <div class="w3-quarter">
+  <div class="w3-card w3-white">
+    <a href="{{ url_for('accser') }}"><img src="{{ url_for('static', filename='./acc.jpg') }}" alt="Error Loading Image......" style="width:100%"></a>
+    <div class="w3-container">
+    <a href="{{ url_for('accser') }}"><button class="w3-button w3-hover-white"><h3>Accounting </h3></button></a>
+    </div>
+    </div>
+  </div>
+  
+  <div class="w3-quarter">
+    <div class="w3-card w3-white">
+      <a href="{{ url_for('taxser') }}"><img alt="TEMPORARY PLACEHOLDER" style="width:100%"></a>
+      <div class="w3-container">
+      <a href="{{ url_for('taxser') }}"><button class="w3-button w3-hover-white"><h3>Taxation</h3></button></a>
+      </div>
+      </div>
+    </div>
+    </div>
+  
+  
 <!-- Pricing Row -->
-<div class="w3-row-padding w3-padding-64" id="clients">
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="clients">
   <h1>Our Clients</h1>
   <p>Over the past 6 years, we have been able to build a client profile of more than 200 companies covering various sectors:</p>
   <p>• Shipping<br>• FMCG and Wholesale Trading<br>• Investment Holding & Fund Management Companies<br>• HR & IT Companies<br>• Oil & Gas<br>• Retail & Automobile industries</p>
@@ -191,10 +202,11 @@
 
 <!-- Contact Container -->
 <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
-  <h1>Contact us at:</h1>
-  <h2>Mail......</h2>
+  <h2>Our contact deatils</h2>
   <h3>Kaizen Management Services Pte Ltd</h3>
   <h3>3 Shenton Way <br>#08-09A<br>Shenton House<br>Singapore 068805</h3>
+  <h3>+65 6221 5848</h3>
+  <h3>info@kaizengroup.sg</h3>
   <div class="mighty-form" id="mf-32a9b06c-94c5-4e99-9fa5-e557680b1107"></div> 
   <script async src="https://form.mightyforms.com/loader/v1/mightyforms.min.js"></script>
     
@@ -216,9 +228,5 @@
 
 <script src="{{ url_for('static', filename='./script.js') }}">
 </script>
-
-
-</script>
-
 </body>
 </html>

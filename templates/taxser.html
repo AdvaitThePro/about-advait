@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<title>Kaizen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='./styles.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id="myPage">
+
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-teal"><img src="{{ url_for('static', filename='./logo.png') }}" width="25px" height="25px" title="Kaizen Logo"></i>Kaizen</a>
+        <a href="#i" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About Us</a>
+        <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Services</a>
+        <a href="#clients" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Important Clients</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact Us</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+          <button class="w3-button" title="Notifications">Important Sites <i class="fa fa-caret-down"></i></button>     
+          <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+            <a href="https://www.iras.gov.sg/irashome/default.aspx" class="w3-bar-item w3-button">IRAS</a>
+            <a href="https://www.acra.gov.sg" class="w3-bar-item w3-button">ACRA</a>
+            <a href="https://www.cpf.gov.sg/" class="w3-bar-item w3-button">CPF</a>
+            <a href="https://www.mom.gov.sg" class="w3-bar-item w3-button">Ministry Of Manpower</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:40px">
+    <a href="#i" class="w3-bar-item w3-button" onclick="myFunction()">About Us</a>
+    <a href="#work" class="w3-bar-item w3-button" onclick="myFunction()">Our Services</a>
+    <a href="#clients" class="w3-bar-item w3-button" onclick="myFunction()">Important Clients</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="myFunction()">Contact Us</a>
+    <a href="https://www.iras.gov.sg/irashome/default.aspx" class="w3-bar-item w3-button" onclick="myFunction()">IRAS</a>
+    <a href="https://www.acra.gov.sg" class="w3-bar-item w3-button" onclick="myFunction()">ACRA</a>
+    <a href="https://www.cpf.gov.sg/" class="w3-bar-item w3-button" onclick="myFunction()">CPF</a>
+    <a href="https://www.mom.gov.sg" class="w3-bar-item w3-button" onclick="myFunction()">Ministry Of Manpower</a>
+  </div>
+
+</body>
+<!--Breadcrumbs-->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="i">
+    <p><a href="{{ url_for('index') }}">Home</a> > <a href="{{ url_for('taxser') }}">Secretarial Services</a></p>
+
+<!--Content-->
+<h1>Taxation Services</h1>
+<p>In Singapore, companies are required to file their corporate tax returns with the Inland Revenue
+    Authority of Singapore (IRAS). Tax preparation and filing is a responsibility of all business owners who
+    have to ensure that their corporate tax matters are filed before the given deadline to avoid civil and
+    criminal penalties.
+    However, the nature of tax returns preparation can be seen as complex and time-consuming. In some
+    cases, it can be a distraction to those business owners whose focus is still primarily on managing the
+    business operation.
+    Our team of tax professionals are competent and possess the in-depth technical knowledge to assist
+    businesses across a wide spectrum of tax services. We pride ourselves to be able to deliver a seamless
+    tax planning, advisory and solution that focuses on helping business leaders to make informed tax
+    decisions, and at the same time relieving them of the tedium in tax compliance.</p>
+
+    <p>Besides statutory tax filing, we also assist our valued clients in attending to queries from IRAS, apply tax ruling and resolving tax issues.<br>• Annual Tax filing procedures for Companies incorporated in Singapore<br>• Personal Tax Filing<br>• GST Quarterly Returns<br>• Withholding Tax<br>• Tax Computation and Filing of Estimated Chargeable Income.<br>• Resolving tax disputes with a view to minimizing tax and penalty exposure
+    </p>
+<a href="{{ url_for('index') }}"><button class="w3-button">Back</button></a>
+</div>
+<script src="{{ url_for('static', filename='./script.js') }}">
+</script>
+</body>
+</html>
