@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="{{ url_for('static', filename='./styles.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='./sersty.css') }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body id="myPage">
 
@@ -45,7 +45,7 @@
 
 
 <!--Breadcrumbs-->
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="i">
+<div class="w3-row-padding w3-padding-64 w3-theme-l5" id="i">
 <p><a href="{{ url_for('index') }}">Home</a> > <a href="{{ url_for('secser') }}">Secretarial Services</a></p>
 
 <!--Secretarial Services-->
@@ -53,7 +53,7 @@
 <p>Kaizen Management Consultancy specializes in assisting clients to set up the most appropriate
 corporate vehicle for a presence in Singapore.</p>
 <p>• Maintenance of statutory records<br>• Establishment of a Singapore Company (Resident/Non- Resident)<br>• Foreign Corporations- Registration of a Singapore Branch/ Setting up a Singapore Representative office.<br>• Provision of Registered office facilities<br>• Nominee secretary and Professional Nominee director services<br>• Liaison with other professionals on statutory requirements.<br>• Statutory Filings with the Accounting and Corporate Regulatory Authority<br>• De-Registration services including assistance on Winding-Up and Striking Off.<br>• Assisting in preparation of commercial agreements<br>• Assistance in maintaining company ESOP.</p>
-<a href="{{ url_for('index') }}"><button class="w3-button">Back</button></a>
+<a href="{{ url_for('index', _anchor='work') }}"><button class="w3-button">Back</button></a>
 </div>
 <script src="{{ url_for('static', filename='./script.js') }}">
 </script>

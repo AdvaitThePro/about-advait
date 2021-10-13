@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="{{ url_for('static', filename='./styles.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='./sersty.css') }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body id="myPage">
 
@@ -45,7 +45,7 @@
 
 </body>
 <!--Breadcrumbs-->
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="i">
+<div class="w3-row-padding w3-padding-64 w3-theme-l5" id="i">
     <p><a href="{{ url_for('index') }}">Home</a> > <a href="{{ url_for('taxser') }}">Taxation Services</a></p>
 
 <!--Content-->
@@ -64,7 +64,7 @@
 
     <p>Besides statutory tax filing, we also assist our valued clients in attending to queries from IRAS, apply tax ruling and resolving tax issues.<br>• Annual Tax filing procedures for Companies incorporated in Singapore<br>• Personal Tax Filing<br>• GST Quarterly Returns<br>• Withholding Tax<br>• Tax Computation and Filing of Estimated Chargeable Income.<br>• Resolving tax disputes with a view to minimizing tax and penalty exposure
     </p>
-<a href="{{ url_for('index') }}"><button class="w3-button">Back</button></a>
+    <a href="{{ url_for('index', _anchor='work') }}"><button class="w3-button">Back</button></a>
 </div>
 <script src="{{ url_for('static', filename='./script.js') }}">
 </script>
